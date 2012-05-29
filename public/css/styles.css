@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+}
+footer {
+    padding: 17px 0 18px 0;
+    border-top: 1px solid #eee;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -70px;
+}
+.push {
+    height: 60px;
+}
+.wrapper > .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.wrapper > .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#spinner {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -18px;
+    margin-left: -18px;
+}
+
+.alert[id*='alert'] {
+    display: none;
+}
+
+.modal {
+    display: none;
+    width: 800px;
+    margin-left: -400px;
+}

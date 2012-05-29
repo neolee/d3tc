@@ -1,0 +1,43 @@
+.container-fluid
+  .row-fluid
+    .span4
+      %form.form#character{:action => "/", :method => "post"}
+        %fieldset
+          .control-group
+            %label{:for => "strength"} Strength
+            .controls
+              %input.input-small{:type => "text", :name => "strength", :autofocus => "autofocus"}
+          .control-group
+            %label{:for => "dexterity"} Dexterity
+            .controls
+              %input.input-small{:type => "text", :name => "dexterity"}
+          .control-group
+            %label{:for => "intelligence"} Intelligence
+            .controls
+              %input.input-small{:type => "text", :name => "intelligence"}
+          .control-group
+            %label{:for => "vitality"} Vitality
+            .controls
+              %input.input-small{:type => "text", :name => "vitality"}
+          .control-group
+            %label{:for => "armor"} Armor
+            .controls
+              %input.input-small{:type => "text", :name => "armor"}
+          .control-group
+            %label{:for => "mlvl"} Monster Level
+            .controls
+              %select.input-medium{:name => "mlvl"}
+                %option{:selected => "selected", :value => "60"}60 (Hell A4)
+                %option{:value => "61"}61 (Inferno A1)
+                %option{:value => "62"}62 (Inferno A2)
+                %option{:value => "63"}63 (Inferno A3/A4)
+              %p.help-block
+                Monster level will affect the real effect of damage reduction
+          .control-group
+            %a.btn.btn-primary#calc Calculate!
+            %p &nbsp;
+            #alert.alert.alert-info
+    .span8
+      #result
+
+%script{ :type => "text/javascript", :src => "/js/main.js"}
