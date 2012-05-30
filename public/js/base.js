@@ -33,21 +33,21 @@ $.validator.setDefaults({
 });
 
 $.validator.messages = ({
-    required: " can't be blank",
-    remote: ' needs to get fixed',
-    email: ' is not a valid email address',
-    url: ' is not a valid URL',
-    date: ' is not a valid date',
-    dateISO: ' is not a valid date (ISO)',
-    number: ' is not a valid number',
-    digits: ' needs to be digits',
-    creditcard: ' is not a valid credit card number',
-    equalTo: ' is not the same value again',
-    accept: ' is not a value with a valid extension',
-    maxlength: jQuery.validator.format(' needs to be more than {0} characters'),
-    minlength: jQuery.validator.format(' needs to be at least {0} characters'),
-    rangelength: jQuery.validator.format(' needs to be a value between {0} and {1} characters long'),
-    range: jQuery.validator.format(' needs to be a value between {0} and {1}'),
-    max: jQuery.validator.format(' needs to be a value less than or equal to {0}'),
-    min: jQuery.validator.format(' needs to be a value greater than or equal to {0}')
+    required: 'required',
+    remote: 'error',
+    email: 'not email',
+    url: 'not URL',
+    date: 'not date',
+    dateISO: 'not date (ISO)',
+    number: 'not number',
+    digits: 'not digits',
+    creditcard: 'not credit card number',
+    equalTo: 'not same value again',
+    accept: 'not with a valid extension',
+    maxlength: jQuery.validator.format('more than {0} characters'),
+    minlength: jQuery.validator.format('less than {0} characters'),
+    rangelength: jQuery.validator.format('not between {0} and {1} characters'),
+    range: jQuery.validator.format('not between {0} and {1}'),
+    max: jQuery.validator.format('greater than {0}'),
+    min: jQuery.validator.format('less than {0}')
 });

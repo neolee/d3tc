@@ -1,5 +1,8 @@
 $("#character").validate({
     rules: {
+        hero: {
+            required: true,
+        },
         strength: {
             required: true,
             number: true,
@@ -19,6 +22,20 @@ $("#character").validate({
         armor: {
             required: true,
             number: true,
+        },
+        resist: {
+            required: true,
+            number: true,
+        },
+        lifeplus: {
+            required: true,
+            number: true,
+        },
+        level: {
+            required: true,
+        },
+        mlevel: {
+            required: true,
         },
     }
 });

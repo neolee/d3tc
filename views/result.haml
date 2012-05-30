@@ -1,0 +1,70 @@
+.row
+  .span8
+    %h4.section-title Summary
+.row
+  .span4
+    %dl.dl.dl-horizontal
+      %dt Hero class
+      %dd
+        %code= D3TC::Engine.heroes[engine.hero]
+      %dt Strength
+      %dd
+        %code= engine.strength
+      %dt Dexterity
+      %dd
+        %code= engine.dexterity
+      %dt Intelligence
+      %dd
+        %code= engine.intelligence
+      %dt Vitality
+      %dd
+        %code= engine.vitality
+      %dt Armor
+      %dd
+        %code= engine.armor
+      %dt Resist
+      %dd
+        %code= engine.resist
+  .span4
+    %dl.dl.dl-horizontal
+      %dt Level
+      %dd
+        %code= engine.level
+      %dt HP
+      %dd
+        %code= engine.hp
+      %dt Effective HP (EHP)
+      %dd
+        %code= fmt_float(engine.ehp)
+      %dt DR from Dodge
+      %dd
+        %code= fmt_percentage(engine.dr_dodge)
+      %dt DR from Armor
+      %dd
+        %code= fmt_percentage(engine.dr_armor)
+      %dt DR from Resist
+      %dd
+        %code= fmt_percentage(engine.dr_resist)
+      %dt DR from All
+      %dd
+        %code= fmt_percentage(engine.dr)
+%p &nbsp;
+.row
+  .span8
+    %h4.section-title Damage Reduction per Attribute
+    %dl.dl.dl-horizontal
+      %dt Strength
+      %dd
+        %code= "10 STR = 10 Armor = +#{fmt_percentage(engine.str_ehp_delta)} EHP"
+      %dt Intelligence
+      %dd
+        %code= "10 INT = 1 Resist = +#{fmt_percentage(engine.int_ehp_delta)} EHP"
+      %dt Vitality
+      %dd
+        %code= "10 VIT = +#{fmt_percentage(engine.vit_ehp_delta)} EHP"
+      %dt Armor
+      %dd
+        %code= "10 Armor = +#{fmt_percentage(engine.armor_ehp_delta)} EHP"
+      %dt Resist
+      %dd
+        %code= "10 Resist = +#{fmt_percentage(engine.resist_ehp_delta)} EHP"

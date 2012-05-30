@@ -41,3 +41,7 @@ footer {
     width: 800px;
     margin-left: -400px;
 }
+
+.section-title {
+    text-align: center;
+}
