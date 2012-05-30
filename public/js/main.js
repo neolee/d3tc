@@ -28,7 +28,9 @@ $("#character").validate({
             number: true,
         },
         lifeplus: {
-            required: true,
+            number: true,
+        },
+        dodge: {
             number: true,
         },
         level: {
