@@ -34,8 +34,16 @@ module D3TC
       1.0 - (1.0 - dr_dodge) * (1.0 - dr_armor) * (1.0 - dr_resist)
     end
     
+    def dr_wo_dodge
+      1.0 - (1.0 - dr_armor) * (1.0 - dr_resist)
+    end
+    
     def ehp
       hp / (1.0 - dr)
+    end
+    
+    def ehp_wo_dodge
+      hp / (1.0 - dr_wo_dodge)
     end
     
     def str_ehp_delta
@@ -93,8 +101,8 @@ module D3TC
       engine.vitality = params[:vitality].to_i
       engine.armor = params[:armor].to_i
       engine.resist = params[:resist].to_i
-      engine.lifeplus = params[:lifeplus].to_i
-      engine.dodge = params[:dodge].to_i
+      engine.lifeplus = params[:lifeplus].to_f
+      engine.dodge = params[:dodge].to_f
       engine.level = params[:level].to_i
       engine.mlevel = params[:mlevel].to_i
       

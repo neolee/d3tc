@@ -25,7 +25,7 @@
       %dt Resist
       %dd
         %code= engine.resist
-  .span4
+  .span8
     %dl.dl.dl-horizontal
       %dt Level
       %dd
@@ -36,6 +36,8 @@
       %dt Effective HP (EHP)
       %dd
         %code= fmt_float(engine.ehp)
+        or w/o dodge
+        %code= fmt_float(engine.ehp_wo_dodge)
       %dt DR from Dodge
       %dd
         %code= fmt_percentage(engine.dr_dodge)
